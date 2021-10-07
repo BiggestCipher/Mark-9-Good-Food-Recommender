@@ -3,7 +3,7 @@ import "./styles.css";
 import { useState } from "react";
 
 const FoodGroup = {
-  StreetFood: [
+  "Street Food": [
     {
       name: "Vada Pav:",
       rating: "4/5",
@@ -36,7 +36,7 @@ const FoodGroup = {
     }
   ],
 
-  SouthIndian: [
+  "South Indian": [
     {
       name: "Masala Dosa:",
       rating: "4/5",
@@ -80,7 +80,7 @@ const FoodGroup = {
 };
 
 export default function App() {
-  const [SelectedType, setType] = useState("StreetFood");
+  const [SelectedType, setType] = useState("Street Food");
   function FoodTypeClickHandler(FoodType) {
     setType(FoodType);
   }
@@ -120,14 +120,21 @@ export default function App() {
                 listStyle: "none",
                 padding: "1rem",
                 border: "2px solid black",
-                width: "90%",
-                margin: "1rem ",
+
+                width: "70%",
+                margin: "1rem 12rem",
                 borderRadius: "0.5rem"
               }}
             >
               {" "}
-              <div style={{ fontSize: "larger" }}> {Food.name} </div>
-              <div style={{ fontSize: "large" }}> {Food.rating} </div>
+              <div style={{ fontSize: "larger", fontWeight: "bold" }}>
+                {" "}
+                {Food.name}{" "}
+              </div>
+              <div style={{ fontSize: "large", margin: "0.5rem" }}>
+                {" "}
+                {Food.rating}{" "}
+              </div>
               <div style={{ fontSize: "large" }}> {Food.summary} </div>
             </li>
           ))}

@@ -1,7 +1,9 @@
 .App {
-  max-width: 800px;
+  max-width: 100%;
   font-family: sans-serif;
   text-align: center;
   margin: auto;
   padding: 3rem;
+  color: purple;
+  background-color: lightcyan;
 }
